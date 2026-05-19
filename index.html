@@ -3,11 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maluzinha</title>
+    <title>Acesso Privado — Malu</title>
+    <meta name="description" content="Conteúdo exclusivo, atualizações diárias e materiais sem filtros. Entre no canal VIP gratuito." />
+    
+    <script>
+      if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
+        window.location.replace('/');
+      }
+    </script>
   </head>
-  <body>
+  <body style="background-color: #09090b; color: #f4f4f5; font-family: sans-serif;">
     <div id="root"></div>
-    <!-- O segredo está aqui: apontar para o main.tsx -->
-    <script type="module" src="/src/main.tsx"></script>
+    
+    <script type="module" src="/src/start.ts"></script>
   </body>
 </html>
